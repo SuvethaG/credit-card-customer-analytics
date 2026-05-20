@@ -48,7 +48,16 @@ recommendations to reduce attrition.
 | 06_stored_procedure.sql | Monthly KPI stored procedure |
 
 ## Dashboard
-[Screenshot to be added after Power BI phase]
+## Dashboard Preview
+
+### Page 1 — Executive Summary
+![Executive Summary](dashboard/page1_executive.png)
+
+### Page 2 — Customer Segmentation
+![Customer Segmentation](dashboard/page2_segmentation.png)
+
+### Page 3 — Churn Risk Dashboard
+![Churn Risk](dashboard/page3_churn_risk.png)
 
 ## Business Recommendations
 1. Launch a Germany-specific retention programme immediately
