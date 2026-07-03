@@ -24,9 +24,9 @@ WITH rfm_scored AS (
         points_earned,
         complain,
 
-		NTILE(4) OVER(ORDER BY tenure DESC) AS recency_score,
-		NTILE(4) OVER(ORDER BY numofproducts DESC) AS frequency_score,
-		NTILE(4) OVER(ORDER BY balance DESC) AS monetary_score
+		NTILE(4) OVER(ORDER BY tenure ASC) AS recency_score,
+		NTILE(4) OVER(ORDER BY numofproducts ASC) AS frequency_score,
+		NTILE(4) OVER(ORDER BY balance ASC) AS monetary_score
 	FROM credit_customers_clean
 	WHERE exited = 0
 )
@@ -45,6 +45,7 @@ FROM rfm_scored;
 
 SELECT *
 FROM rfm_segments;
+
 
 
 -- SEGMENT DISTRIBUTION
@@ -159,6 +160,7 @@ LIMIT 10;
 
 
 -- FINAL EXPORT TABLE FOR POWER BI
+DROP TABLE IF EXISTS powerbi_export;
 
 CREATE TABLE powerbi_export AS
 SELECT 
